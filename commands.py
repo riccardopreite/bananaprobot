@@ -3,7 +3,7 @@ import os
 from time import sleep
 
 def __command__(id,message,bot):
-	dict_command = {'/pull':['cd /home/smog/bananaprobot && git pull && cd','bot aggiornato'],'/down_debian':['ssh smogdeb@192.168.1.10 "sudo shutdown now"','spegnimento server debian'],'/reboot_debian':['ssh smogdeb@192.168.1.10 "shutdown -r"','riavvio server debian'],'/up_server':['up_fisso','server on line a breve'],  '/reboot_board':['shutdown -r 1','rebooting....'], '/poweroff_board':['shutdown -h `"now + 10 seconds"`','poweroff....']}
+	dict_command = {'/pull':['cd /home/smog/bananaprobot && git pull && cd','bot aggiornato'],'/down_debian':['ssh smogdeb@192.168.1.10 "sudo shutdown now"','spegnimento server debian'],'/reboot_debian':['ssh smogdeb@192.168.1.10 "sudo reboot now"','riavvio server debian'],'/up_server':['up_fisso','server on line a breve'],  '/reboot_board':['shutdown -r 1','rebooting....'], '/poweroff_board':['shutdown -h `"now + 10 seconds"`','poweroff....']}
 	list_insulti = ['sei un cane','attaccati al cazzo','testa di minchia','gaydimmerda','fatti sfondare da un nero','porcamadonna non puoi']
 	time = 5
 	if (id == 71120657):
