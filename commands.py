@@ -1,4 +1,5 @@
 import random
+import subprocess
 import os
 from time import sleep
 #prova comando pull
@@ -8,9 +9,12 @@ def __command__(id,message,bot):
 	time = 5
 	if (id == 71120657):
 		if message in dict_command.keys():
-			os.system(dict_command[message][0])
+			p = subprocess.Popen(dict_command[message][0], stdout=subprocess.PIPE)
+			out = p.stdout.read()
+			#result = os.system(dict_command[message][0])
 			sleep(time/100)
 			bot.sendMessage(id, dict_command[message][1])
+			bot.sendMessage(id, out)
 		else:
 			sleep(time/100)
 			bot.sendMessage(id, 'comando non previsto!')
