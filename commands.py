@@ -10,7 +10,7 @@ def __command__(id,message,bot):
 	p = ""
 	if (id == 71120657):
 		if message in dict_command.keys():
-		 	proc = Popen(dict_command[message][0], shell=True, stdout=PIPE, )
+		 	proc = Popen(dict_command[message][0], shell=True, stdout=PIPE,)
 			p = proc.communicate()[0]
 			#result = os.system(dict_command[message][0])
 			sleep(time/100)
