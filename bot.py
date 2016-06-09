@@ -11,9 +11,9 @@ def handle(msg):
 	commands.__command__(dict_msg["from"]["id"], dict_msg["text"],bot)
 
 dict_msg = dict()
-string_msg = dict()
+#string_msg = dict()
 message = ""
-user = ""
+#user = ""
 
 TOKEN = '233835233:AAEBsmLtNmXdbc5G811eoGuYzOIpkS1LBgk'
 
