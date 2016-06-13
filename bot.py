@@ -6,19 +6,14 @@ import subprocess
 from time import sleep
 import commands
 
-ID = sys.argv[2]
-print ID
 def handle(msg):
 	dict_msg = msg
 	commands.__command__(dict_msg["from"]["id"], dict_msg["text"], bot,ID)
 
 dict_msg = dict()
-#string_msg = dict()
 message = ""
-#user = ""
-
-#TOKEN = '233835233:AAEBsmLtNmXdbc5G811eoGuYzOIpkS1LBgk'
 TOKEN = sys.argv[1]
+ID = sys.argv[2]
 
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)
