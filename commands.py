@@ -13,8 +13,8 @@ def __command__(id,message,bot,ID):
 		 	proc = Popen(dict_command[message][0], shell=True, stdout=PIPE,)
 			p = proc.communicate()[0]
 			sleep(time/100)
-			bot.sendMessage(id, p)
 			bot.sendMessage(id, dict_command[message][1])
+			bot.sendMessage(id, p)
 		else:
 			sleep(time/100)
 			bot.sendMessage(id, 'comando non previsto!')
