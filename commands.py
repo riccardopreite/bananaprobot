@@ -5,13 +5,12 @@ from time import sleep
 #prova comando pull
 #71120657
 def __command__(id,message,bot,ID):
-	print "command"
 	print ID
 	dict_command = {'/pull':['cd /home/smog/bananaprobot/ && git pull && cd','bot aggiornato'],'/down_debian':['ssh smogdeb@192.168.1.10 "sudo shutdown -h"','spegnimento server debian'],'/reboot_debian':['ssh smogdeb@192.168.1.10 "sudo reboot now"','riavvio server debian'],'/up_server':['up_fisso','server on line a breve'],  '/reboot_board':['sudo shutdown -r 1','rebooting....'], '/poweroff_board':['sudo shutdown -h `"now + 10 seconds"`','poweroff....']}
 	list_insulti = ['sei un cane','attaccati al cazzo','testa di minchia','gaydimmerda','fatti sfondare da un nero','porcamadonna non puoi']
 	time = 5
 	p = ""
-	if (id == ID):
+	if (id == str(ID)):
 		if message in dict_command.keys():
 		 	proc = Popen(dict_command[message][0], shell=True, stdout=PIPE,)
 			p = proc.communicate()[0]
