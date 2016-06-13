@@ -10,7 +10,7 @@ def __command__(id,message,bot,ID):
 	list_insulti = ['sei un cane','attaccati al cazzo','testa di minchia','gaydimmerda','fatti sfondare da un nero','porcamadonna non puoi']
 	time = 5
 	p = ""
-	if (id == str(ID)):
+	if (str(id) == ID):
 		if message in dict_command.keys():
 		 	proc = Popen(dict_command[message][0], shell=True, stdout=PIPE,)
 			p = proc.communicate()[0]
