@@ -5,8 +5,9 @@ import telepot
 import subprocess
 from time import sleep
 import commands
-ID = sys.argv[2]
 
+ID = sys.argv[2]
+print ID
 def handle(msg):
 	dict_msg = msg
 	commands.__command__(dict_msg["from"]["id"], dict_msg["text"], bot,ID)
