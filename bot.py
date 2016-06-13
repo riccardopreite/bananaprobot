@@ -7,15 +7,17 @@ from time import sleep
 import commands
 
 def handle(msg):
+	ID = sys.argv[2]
 	dict_msg = msg
-	commands.__command__(dict_msg["from"]["id"], dict_msg["text"],bot)
+	commands.__command__(dict_msg["from"]["id"], dict_msg["text"], bot, ID)
 
 dict_msg = dict()
 #string_msg = dict()
 message = ""
 #user = ""
 
-TOKEN = '233835233:AAEBsmLtNmXdbc5G811eoGuYzOIpkS1LBgk'
+#TOKEN = '233835233:AAEBsmLtNmXdbc5G811eoGuYzOIpkS1LBgk'
+TOKEN = sys.argv[1]
 
 bot = telepot.Bot(TOKEN)
 bot.message_loop(handle)

@@ -1,2 +1,4 @@
-!#/bin/bash
-/home/smog/bananaprobot/bot.py
+#!/bin/bash
+TOKEN=$1
+ID=$2
+/home/smog/bananaprobot/bot.py $TOKEN $ID
