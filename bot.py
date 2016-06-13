@@ -8,7 +8,7 @@ import commands
 
 def handle(msg):
 	dict_msg = msg
-	commands.__command__(dict_msg["from"]["id"], dict_msg["text"], bot, ID)
+	commands.__command__(dict_msg["from"]["id"], dict_msg["text"], bot)
 
 dict_msg = dict()
 #string_msg = dict()
